@@ -1,0 +1,35 @@
+.contactTitle {
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+.contactItem {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.contactPhone {
+  margin-left: auto;
+}
+
+.btnDelete {
+  width: 100px;
+  height: 36px;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 40px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background-color: blue;
+  color: yellow;
+}
+
+.btnDelete:hover {
+  background-color: rgb(1, 1, 121);
+}
