@@ -1,15 +1,34 @@
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-
-axios.defaults.baseURL = 'https://652d1f5af9afa8ef4b26d076.mockapi.io';
+import { $instance } from './authSlice';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('/contacts');
-      return response.data;
+      const { data } = await $instance.get('/contacts');
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  },
+  {
+    condition: (_, thunkAPI) => {
+      const isAuthenticated = thunkAPI.getState().auth.isAuthenticated;
+      if (isAuthenticated) {
+        return true;
+      }
+      return false;
+    },
+  }
+);
+
+export const fetchAddContacts = createAsyncThunk(
+  'contacts/fetchAddContacts',
+  async (contactData, thunkAPI) => {
+    try {
+      const { data } = await $instance.post('/contacts', contactData);
+      return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
@@ -20,25 +39,25 @@ export const fetchDeleteContacts = createAsyncThunk(
   'contacts/deleteContact',
   async (contactId, thunkAPI) => {
     try {
-      const response = await axios.delete(`/contacts/${contactId}`);
-      return response.data;
+      const { data } = await $instance.delete(`/contacts/${contactId}`);
+      return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
-export const fetchAddContacts = createAsyncThunk(
-  'contacts/addContact',
-  async (newContact, thunkAPI) => {
-    try {
-      const response = await axios.post('/contacts', newContact);
-      return response.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
+// export const fetchAddContacts = createAsyncThunk(
+//   'contacts/addContact',
+//   async (newContact, thunkAPI) => {
+//     try {
+//       const response = await $instance.post('/contacts', newContact);
+//       return response.data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );
 
 const initialState = {
   contacts: [],
@@ -83,7 +102,7 @@ const phonebookSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
-      .addCase(fetchAddContacts.pending, (state, action) => {
+      .addCase(fetchAddContacts.pending, state => {
         state.isLoading = true;
         state.error = null;
       })
