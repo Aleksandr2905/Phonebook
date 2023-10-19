@@ -2,7 +2,7 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import css from './App.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { ToastContainer, cssTransition } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { HomePage } from 'pages/HomePage';
 import { ContactsPage } from 'pages/ContactsPage';
