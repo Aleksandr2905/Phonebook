@@ -76,7 +76,7 @@ export const App = () => {
         </nav>
       </header>
       <main>
-        <Routes>
+        <Routes start>
           <Route path="/" element={<HomePage />} />
           <Route
             path="/contacts"
