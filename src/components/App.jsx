@@ -77,7 +77,7 @@ export const App = () => {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<HomePage to="/" />} />
+          <Route path="/" element={<HomePage />} />
           <Route
             path="/contacts"
             element={
