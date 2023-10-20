@@ -10,6 +10,8 @@ export const selectError = state => state.phonebook.error;
 
 export const selectIsAuthenticated = state => state.auth.isAuthenticated;
 
+export const selectAuthUser = state => state.auth.userData;
+
 export const selectFilteredContacts = createSelector(
   [selectContacts, selectFilter],
   (contacts, filter) => {

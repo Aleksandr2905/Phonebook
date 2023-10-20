@@ -26,10 +26,10 @@
   cursor: pointer;
   border-radius: 4px;
   border: none;
-  background-color: blue;
-  color: yellow;
+  background-color: #1976d2;
+  color: #fff;
 }
 
 .btnDelete:hover {
-  background-color: rgb(1, 1, 121);
+  background-color: rgb(227, 0, 0);
 }

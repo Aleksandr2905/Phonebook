@@ -1,0 +1,151 @@
+/* ========================= LOGIN PAGE ========================= */
+
+.loginWrap {
+  width: 350px;
+  height: 400px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.loginText {
+  font-size: 32px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 77);
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginLabel {
+  font-size: 18px;
+  text-align: start;
+  margin-left: 30px;
+  padding-bottom: 6px;
+  color: rgb(0, 0, 0, 0.7);
+}
+
+.loginInput {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  border: 1px solid rgb(0, 0, 0, 0.5);
+}
+
+.loginBtn {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  letter-spacing: 0.07em;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.loginBtn:hover {
+  color: rgb(1, 1, 121);
+}
+
+/* ========================= REGISTER PAGE ========================= */
+
+.registerWrap {
+  width: 350px;
+  height: 400px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.registerText {
+  font-size: 32px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 77);
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerLabel {
+  font-size: 18px;
+  text-align: start;
+  margin-left: 30px;
+  padding-bottom: 6px;
+  color: rgb(0, 0, 0, 0.7);
+}
+
+.registerInput {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid rgb(0, 0, 0, 0.5);
+}
+
+.registerBtn {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  letter-spacing: 0.07em;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.registerBtn:hover {
+  color: rgb(1, 1, 121);
+}
+
+/* ========================= CONTACT PAGE ========================= */
+
+.contactWrap {
+  width: 500px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 6px;
+}

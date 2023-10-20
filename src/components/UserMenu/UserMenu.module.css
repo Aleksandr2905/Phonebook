@@ -1,0 +1,29 @@
+.userMenuWrap {
+  display: flex;
+  gap: 30px;
+  margin-right: 70px;
+}
+
+.userMenuText {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #fff;
+}
+
+.navBtnLogOut {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s;
+  color: #fff;
+}
+
+.navBtnLogOut:hover {
+  color: rgb(1, 1, 121);
+}

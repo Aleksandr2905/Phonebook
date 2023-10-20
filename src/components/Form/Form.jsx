@@ -29,7 +29,7 @@ export const Form = ({ handleAddContact }) => {
             name="name"
             required
             value={name}
-            placeholder="Rosie Simpson"
+            placeholder="Name"
           />
         </label>
         <label className={style.label}>
@@ -40,7 +40,7 @@ export const Form = ({ handleAddContact }) => {
             type="tel"
             name="number"
             required
-            placeholder="111-22-33"
+            placeholder="ХХХ-ХХ-ХХ"
             value={number}
           />
         </label>

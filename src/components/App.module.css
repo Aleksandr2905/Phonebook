@@ -1,16 +1,39 @@
-/* .wrap {
-  width: 600px;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  border: 1px solid gray;
-  border-radius: 6px;
-  background-color: aliceblue;
-} */
+/* ====================== NAVIGATION ====================== */
+.header {
+  background-color: #1976d2;
+}
 
 .navWrap {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
   height: 80px;
-  background-color: #9898ff;
+  margin-left: 70px;
+  position: relative;
+  background-color: #1976d2;
+}
+
+.navBtnWrap {
+  display: flex;
+  gap: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navBtn {
+  font-size: 20px;
+  letter-spacing: 0.07em;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-decoration: none;
+  transition: all 0.3s;
+  color: #fff;
+}
+
+.navBtn:hover {
+  color: rgb(1, 1, 121);
+}
+
+.active {
+  color: rgb(255, 247, 1);
 }

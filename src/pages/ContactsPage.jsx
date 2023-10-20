@@ -18,6 +18,7 @@ import {
 } from 'redux/selectors';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import css from './Page.module.css';
 
 export const ContactsPage = () => {
   const contacts = useSelector(selectContacts);
@@ -56,7 +57,7 @@ export const ContactsPage = () => {
   };
 
   return (
-    <div>
+    <div className={css.contactWrap}>
       <Form handleAddContact={handleAddContact} />
       <Filter onChange={handleFilterChange} value={filter} />
       {isLoading ? (
