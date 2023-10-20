@@ -1,10 +1,4 @@
-import {
-  NavLink,
-  Navigate,
-  Route,
-  Routes,
-  useLocation,
-} from 'react-router-dom';
+import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import css from './App.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
