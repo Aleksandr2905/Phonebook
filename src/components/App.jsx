@@ -1,4 +1,10 @@
-import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import {
+  NavLink,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
 import css from './App.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -76,7 +82,8 @@ export const App = () => {
         </nav>
       </header>
       <main>
-        <Routes start>
+        <Routes>
+          <Route path="/" element={<Navigate to="/" />} />
           <Route path="/" element={<HomePage />} />
           <Route
             path="/contacts"
