@@ -45,6 +45,7 @@ export const ContactsPage = () => {
         number,
       })
     );
+    return toast.success(`${name} added to contacts.`);
   };
 
   const handleFilterChange = event => {
@@ -52,8 +53,19 @@ export const ContactsPage = () => {
     dispatch(changeFilter(inputFilter));
   };
 
+  // const handleDeleteContact = contactId => {
+  //   dispatch(fetchDeleteContacts(contactId));
+  // };
+
   const handleDeleteContact = contactId => {
+    const contactToDelete = contacts.find(contact => contact.id === contactId);
+
+    if (!contactToDelete) {
+      return;
+    }
+
     dispatch(fetchDeleteContacts(contactId));
+    toast.error(`${contactToDelete.name} has been deleted.`);
   };
 
   return (
