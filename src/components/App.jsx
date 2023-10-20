@@ -83,8 +83,7 @@ export const App = () => {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Navigate to="/" />} />
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage to="/" />} />
           <Route
             path="/contacts"
             element={
