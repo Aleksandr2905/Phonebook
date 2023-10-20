@@ -8,7 +8,6 @@ import { HomePage } from 'pages/HomePage';
 import { ContactsPage } from 'pages/ContactsPage';
 import { LogInPage } from 'pages/LogInPage';
 import { RegisterPage } from 'pages/RegisterPage';
-import { NotFoundPage } from 'pages/NotFoundPage';
 import { requestAutoLogIn } from 'redux/authSlice';
 import { selectIsAuthenticated } from 'redux/selectors';
 import { RestrictedRoute } from './RestrictedRoute/RestrictedRoute';
@@ -24,10 +23,6 @@ export const App = () => {
   useEffect(() => {
     dispatch(requestAutoLogIn());
   }, [dispatch]);
-
-  // const handleLogOutClick = () => {
-  //   dispatch(requestLogOut());
-  // };
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -107,7 +102,6 @@ export const App = () => {
               </RestrictedRoute>
             }
           />
-          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <ToastContainer />

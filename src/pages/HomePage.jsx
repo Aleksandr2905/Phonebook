@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
+import image from '../components/image/smartphone.jpg';
+import css from './Page.module.css';
 
 export const HomePage = () => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <div>
+      <img className={css.homeImg} src={image} alt="phone" />
+    </div>
+  );
+};
