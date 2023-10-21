@@ -14,6 +14,7 @@ import { RestrictedRoute } from './RestrictedRoute/RestrictedRoute';
 import { ProtectedRoute } from './ProtectedRoute/ProtectedRoute';
 import { fetchContacts } from 'redux/phonebookReducer';
 import { UserMenu } from './UserMenu/UserMenu';
+import { NotFoundPage } from 'pages/NotFoundPage';
 
 export const App = () => {
   const isAuthenticated = useSelector(selectIsAuthenticated);
@@ -102,6 +103,7 @@ export const App = () => {
               </RestrictedRoute>
             }
           />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <ToastContainer />
